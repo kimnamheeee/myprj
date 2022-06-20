@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>조각책방</title>
+        <meta charset = "utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/clone.css') }}">
+    </head>
+    <body>
+        <div id="title">
+            <div>
+                <h1 id="webtitle">조각책방</h1>
+            </div>
+        </div>
+        <div id="main">
+            <div id="searchbox">
+                <input type="text" placeholder="해당 페이지에서 검색은 아래 콤보박스를 이용해 주세요.">
+                <button id="searchbutton">검색</button>
+            </div>
+            <div id="menuboard">
+                <tr>
+                    <button onclick="location.href='/'">홈</button>
+                    <button style="float: right;" onclick="location.href='/logout'">로그아웃</button>
+                </tr>
+            </div>
+            <div id="review">
+                <h2>리뷰 작성하기</h2>
+                <div>
+                    <form action = "/post" method="POST" class="input-form">
+                    <input id="writereview" type="text" placeholder="작품에 대한 당신의 감상을 여기에 기록해 보세요 :)" name ="writereview">
+                    <button>저장하기</button>
+                    <button onclick="location.href='/'">나가기(저장되지 않습니다.)</button>
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

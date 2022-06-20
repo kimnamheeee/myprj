@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Cafe24Oneprettynight';
+}
+
+#webtitle{
+    font-size: 50px;
+    padding: 0px;
+}
+
+#title{
+    font-family: 'Cafe24Oneprettynight';
+    text-align: center;
+    margin-top: 15px;
+}
+
+button{
+    font-family: 'Cafe24Oneprettynight';
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.go{
+    transform: translateY(-220px);
+    transition-property: all;
+    transition-duration: 2s;
+    transition-delay: 0.5s;
+}
+
+#searchbox{
+    height: 40px;
+    width: 400px;
+    border: 1px solid black;
+    background: none;
+    left: 50%;
+    margin:0 auto;
+}
+
+input{
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 16px;
+    width: 325px;
+    padding: 10px;
+    border: 0px;
+    outline: none;
+    float: left;
+}
+
+#searchbutton{
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 15px;
+    width: 50px;
+    height: 100%;
+    border: 0px;
+    background: #DDE7E7;
+    outline: none;
+    float: right;
+    color: black;
+    cursor: pointer;
+    margin: 0px;
+}
+
+#menuboard{
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 20px;
+    background: #DDE7E7;
+    padding: 10px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+#bookranking{
+    margin-left: 10px;
+}
+
+#bookrecommend{
+    text-align: center;
+}
+
+#startbutton{
+    font-family: 'Cafe24Oneprettynight';
+    border: 1px solid black;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    color: black;
+}
+
+#startbutton:hover{
+    border-radius: 15px;
+    color: #616264;
+}
+
+#startbutton::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #DDE7E7;
+    z-index: -1;
+    transition: 0.8s;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+    -webkit-border-radius: 0 0 50% 50%;
+    -moz-border-radius: 0 0 50% 50%;
+    -o-border-radius: 0 0 50% 50%;
+}
+
+#startbutton:hover::before{
+    height: 180%;
+}
+
+#noreview{
+    text-align: center;
+    padding: 120px;
+}
+
+#bookranking{
+    margin-left: 10px;
+}
+
+.bookbox{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.rankingnum{
+    vertical-align: top;
+    text-align: left;
+}
+
+.booktitle{
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+}
+
+#writereview{
+    font-family: 'Chosunilbo_myungjo';
+    height: 350px;
+    width: 98%;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    border: 1px solid black;
+}
+
+#review{
+    margin-left: 10px;
+}
+
+#listBox {
+    max-width: 500px;
+    background-color: white;
+    z-index: 100;
+    position: relative;
+    visibility: hidden;
+  }
+
+.listInner {
+    background-color: #dedede;
+    margin: 10px 5px;
+    padding: 4px;
+}
+
+.novel {
+    font-weight: bold;
+    color: #616264;
+    padding-right: 10px;
+}

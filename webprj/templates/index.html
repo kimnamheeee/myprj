@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>조각책방</title>
+        <meta charset = "utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+    </head>
+    <body>
+            {%if userid%}
+            <p style="text-align: right;">{{userid}} 님 안녕하세요!</p>
+            {%endif%}
+        <div id="title">
+            <div>
+                <h1 id="webtitle">조각책방</h1>
+            </div>
+            <div id="subtitle">
+                <p>조각조각 기워 만드는 나만의 독서 기록장</p>
+                <button id="startbutton">시작하기</button>
+            </div>
+        </div>
+        <div id="main">
+            <div id="searchbox">
+                <input type="text" id = "search" onkeyup = "filter()" placeholder="도서명 / 단편 소설 제목을 입력하세요">
+                <button id="searchbutton">검색</button>
+                <br>
+                <br>
+                <div id="listBox">
+                    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+                </div>
+            </div>
+            <div id="menuboard">
+                <tr>
+                    {%if userid%}
+                    <button onclick="location.href='/review'">리뷰 작성하기</button>
+                    <button style="float: right;" onclick="location.href='/logout'">로그아웃</button>
+                    {%endif%}
+                    {%if not userid%}
+                    <button style="float: right;" onclick="location.href='/login'">로그인</button>
+                    {%endif%}
+                </tr>
+            </div>
+            <div id="bookranking">
+                <h2>내가 작성한 리뷰</h2>
+                {%if userid %}
+                <p>{{value}}</p>
+                {%endif%}
+                {%if not userid%}
+                <div style="text-align: center; padding: 70px;">
+                <p>* 아직 로그인하지 않았습니다*</p>
+                <h1>로그인하면 리뷰 목록을 확인할 수 있어요!</h1>
+                </div>
+                {%endif%}
+                {%if userid %}
+                <div class="bookbox"></div> 
+                {%endif%}
+            </div>
+        </div>
+    </body>
+</html>
